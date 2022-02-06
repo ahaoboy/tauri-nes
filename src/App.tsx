@@ -46,7 +46,6 @@ function App() {
     let st = +new Date();
     const d = await invoke("get_data");
     console.log("get_data", +new Date() - st, d);
-    return 
     const r = await invoke("to_button_internal_js", { n: 1 });
     console.log("r", r);
     const [file] = await uploadFileInput();
@@ -86,7 +85,7 @@ function App() {
       ctx.putImageData(imageData, 0, 0);
       f = false;
     };
-    // stepFrame();
+    stepFrame();
 
   };
   return (
